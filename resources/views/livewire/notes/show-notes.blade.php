@@ -52,7 +52,8 @@ new class extends Component {
                         <p class="text-xs">Recipient: <span class="font-semibold ">{{ $note->recipient }}</span>
                         </p>
                         <div>
-                            <x-button rounded white icon="eye"></x-button>
+                            <x-button rounded white icon="eye" href="{{ route('notes.view', ['note' => $note]) }}"
+                                wire:navigate></x-button>
                             <x-button wire:click="delete('{{ $note->id }}')" rounded white
                                 icon="trash"></x-button>
                         </div>

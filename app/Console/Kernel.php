@@ -12,7 +12,7 @@ class Kernel extends ConsoleKernel
    */
   protected function schedule(Schedule $schedule): void
   {
-    $schedule->command('app:send-scheduled-notes')->everyTenSeconds();
+    $schedule->command('app:send-scheduled-notes')->timezone('Europe/Istanbul')->dailyAt("09:00");
   }
 
   /**
